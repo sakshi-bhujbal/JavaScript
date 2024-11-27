@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function validate(){
+        let email=document.getElementById("email").value;
+
+        var emailpat=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,6}$/;
+        if(emailpat.test(email)){
+            alert("Vlaid email");
+        }
+        else{
+            alert("Invalid email");
+        }
+    }
+</script>
+<body>
+    <form>
+        Enter email: <input type="text" value="emmail" id="email">
+        <input type="button" value="submit" onclick="validate()">
+    </form>
+</body>
+</html>

@@ -12,7 +12,7 @@
         let age=parseInt(document.getElementById("age").value);
         let pat=/^[A-Za-z]+$/;
 
-        if(fn==" " || ln==" "||age==" "){
+        if(fn=="" || ln==""||age==""){
             alert("Text box is empty");
         }
         else if(pat.test(fn) && pat.test(ln) && age>=18 && age<=50){

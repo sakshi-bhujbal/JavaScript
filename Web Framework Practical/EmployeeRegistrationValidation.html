@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+</head>
+<script>
+    function validate(){
+        let name=document.getElementById("name").value;
+        let dob=document.getElementById("dob").value;
+        let sal=document.getElementById("sal").value;
+        let jdate=document.getElementById("jdate").value;
+
+        var namepat=/^[A-Za-z]+(?:[\s'-][A-Za-z]+)*$/
+        var dobpat=/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[0-2])[\/\-]\d{4}$/;
+        
+        var jdatepat=/^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[0-2])[\/\-]\d{4}$/;
+        var salpat=/^[1-9]\d{0,5}(?:\.\d{1,2})?$/;
+
+        if(!namepat.test(name)){
+            alert("Invalid name format");
+        }
+        else if(!dobpat.test(dob)){
+            alert("Invalid date of birth");
+        }
+        else if(!salpat.test(sal)){
+            alert("Enter valid salary");
+        }
+        else if(!jdatepat.test(jdate)){
+            alert("invalid joing date");
+        }
+        else{
+            alert("you entered valid details");
+        }
+
+        
+    }
+</script>
+<body>
+    <form>
+        <h2>Employee Registration form</h2>
+        Enter employee name: <input type="text" id="name">
+        <br>
+        Enter date of birth: <input type="text" id="dob">
+        <br>
+        Enter date of joining: <input type="text" id="jdate">
+        <br>
+        Enter salary: <input type="text" id="sal">
+
+        <input type="button" value="submit" onclick="validate()">
+    </form>
+</body>
+</html>
