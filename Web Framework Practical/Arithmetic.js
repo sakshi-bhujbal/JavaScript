@@ -17,10 +17,11 @@ app.post("/",function(req,res){
 
     res.writeHead(200,{'content-type':'text/html'})
     res.write("Addition: "+obj.add(x,y));
-    res.write("Subtraction: "+obj.sub(x,y));
-    res.write("Multiplication: "+obj.mul(x,y));
-    res.write("Division: "+obj.div(x,y));
-    res.write("Modulus: "+obj.mod(x,y));
+    res.write("<br> Subtraction: "+obj.sub(x,y));
+    res.write("<br> Multiplication: "+obj.mul(x,y));
+    res.write("<br> Division: "+obj.div(x,y));
+    res.write("<br> Modulus: "+obj.mod(x,y));
+    res.end();
 })
 
 app.listen(8080)
