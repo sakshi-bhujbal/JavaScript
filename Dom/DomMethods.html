@@ -7,10 +7,16 @@
 </head>
 <body>
     <p id="main"></p>
-    <p class="demo"></p>
+    <p id="demo"></p>
+    <p class="cls"></p>
+    <p class=""></p>
     <script>
+        let para=document.getElementsByTagName("p");
+        for(let i=0;i<para.length;i++){
+            para[i].style.background="red";
+        }
         document.getElementById("main").innerHTML="HEllo";
-        document.getElementsByClassName("demo").style.background="red"; 
+        
         </script>
 
 </body>
