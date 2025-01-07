@@ -9,14 +9,15 @@
     <p id="main"></p>
     <p id="demo"></p>
     <p class="cls"></p>
-    <p class=""></p>
+    <p class="cls"></p>
     <script>
-        let para=document.getElementsByTagName("p");
+        let para=document.getElementsByClassName("cls");
         for(let i=0;i<para.length;i++){
-            para[i].style.background="red";
+            para[i].style.background="pink";
         }
-        document.getElementById("main").innerHTML="HEllo";
-        
+        document.getElementById("main").innerHTML="Hello";
+        document.getElementsByClassName("cls")[0].innerHTML="Welcome to js";
+        document.getElementsByClassName("cls")[1].innerHTML="Have a nice day";
         </script>
 
 </body>
